@@ -9,7 +9,7 @@ const MyBlogs = () => {
   useEffect(() => {
     const fetchMyBlogs = async () => {
       const { data } = await axios.get(
-        "http://localhost:4000/api/v1/blog/myblogs",
+        "https://ashishsharmablogs.onrender.com/api/v1/blog/myblogs",
         { withCredentials: true }
       );
       // console.log("my blogs", data);
@@ -19,7 +19,7 @@ const MyBlogs = () => {
   }, []);
 
   const deleteBlogHandler = async (id) => {
-    await axios.delete(`http://localhost:4000/api/v1/blog/delete/${id}`, {
+    await axios.delete(`https://ashishsharmablogs.onrender.com/api/v1/blog/delete/${id}`, {
       withCredentials: true,
     })
     .then((res) => {

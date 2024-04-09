@@ -11,7 +11,7 @@ const SingleBlog = () => {
     const getSingleBlog = async () => {
       try {
         const { data } = await axios.get(
-          `http://localhost:4000/api/v1/blog/singleblog/${id}`,
+          `https://ashishsharmablogs.onrender.com/api/v1/blog/singleblog/${id}`,
           { withCredentials: true }
         );
         setBlog(data.blog);

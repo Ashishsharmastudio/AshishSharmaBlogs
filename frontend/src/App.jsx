@@ -24,7 +24,7 @@ const App = () => {
     const fetchData = async () => {
       try {
         const { data } = await axios.get(
-          "http://localhost:4000/api/v1/user/myprofile",
+          "https://ashishsharmablogs.onrender.com/api/v1/user/myprofile",
           { withCredentials: true }
         );
         setUserData(data.user);
@@ -37,7 +37,7 @@ const App = () => {
 
       try {
         const { data } = await axios.get(
-          "http://localhost:4000/api/v1/blog/all",
+          "https://ashishsharmablogs.onrender.com/api/v1/blog/all",
           { withCredentials: true }
         );
         setBlogs(data.allBlogs);
