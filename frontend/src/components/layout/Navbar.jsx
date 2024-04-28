@@ -14,7 +14,7 @@ const Navbar = () => {
     setShow(!show);
   };
 
-  const isDashboard = useLocation("https://ashishsharmablogs.onrender.com/dashboard");
+  const isDashboard = useLocation("https://ashishsharmablogs-1.onrender.com/dashboard");
   const { mode, setMode, isAuthenticated, userData, setIsAuthenticated } =
     useContext(Context);
   const navigateTo = useNavigate();
@@ -25,7 +25,7 @@ const Navbar = () => {
     e.preventDefault();
     try {
       const { data } = await axios.get(
-        "https://ashishsharmablogs.onrender.com/api/v1/user/logout",
+        "https://ashishsharmablogs-1.onrender.com/api/v1/user/logout",
         { withCredentials: true }
       );
       setIsAuthenticated(false);

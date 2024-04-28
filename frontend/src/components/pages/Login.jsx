@@ -17,7 +17,7 @@ const Login = () => {
     e.preventDefault();
     await axios
       .post(
-        "https://ashishsharmablogs.onrender.com/api/v1/user/login",
+        "https://ashishsharmablogs-1.onrender.com/api/v1/user/login",
         { email, password, role },
         {
           withCredentials: true,
@@ -29,7 +29,7 @@ const Login = () => {
         setEmail("");
         setPassword("");
         setRole("");
-        navigateTo(0, { replace: true });
+        navigateTo("/");
       })
       .catch((error) => {
         toast.error(error.response.data.message);

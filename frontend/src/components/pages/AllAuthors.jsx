@@ -14,7 +14,7 @@ const AllAuthors = () => {
       setLoading(true);
       try {
         const { data } = await axios.get(
-          "https://ashishsharmablogs.onrender.com/api/v1/user/authors",
+          "https://ashishsharmablogs-1.onrender.com/api/v1/user/authors",
           { withCredentials: true }
         );
         setAuthors(data.authors);

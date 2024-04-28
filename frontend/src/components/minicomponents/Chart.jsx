@@ -29,7 +29,7 @@ const Chart = () => {
   useEffect(() => {
     const fetchMyBlogs = async () => {
       const { data } = await axios.get(
-        "https://ashishsharmablogs.onrender.com/api/v1/blog/myblogs",
+        "https://ashishsharmablogs-1.onrender.com/api/v1/blog/myblogs",
         { withCredentials: true }
       );
       setMyBlogs(data.blogs);

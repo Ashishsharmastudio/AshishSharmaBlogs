@@ -97,7 +97,7 @@ const CreateBlog = () => {
 
     try {
       const { data } = await axios.post(
-        "https://ashishsharmablogs.onrender.com/api/v1/blog/post",
+        "https://ashishsharmablogs-1.onrender.com/api/v1/blog/post",
         formData,
         {
           withCredentials: true,
