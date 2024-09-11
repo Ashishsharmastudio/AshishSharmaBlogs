@@ -4,11 +4,12 @@ import { Context } from "../../main";
 import axios from "axios";
 import toast from "react-hot-toast";
 
+
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [role, setRole] = useState("");
-  const { mode, isAuthenticated } = useContext(Context);
+  const { mode, isAuthenticated, setIsAuthenticated} = useContext(Context);
   const navigateTo = useNavigate();
 
   
@@ -25,6 +26,7 @@ const Login = () => {
         }
       )
       .then((res) => {
+        setIsAuthenticated(true)
         toast.success(res.data.message);
         setEmail("");
         setPassword("");
